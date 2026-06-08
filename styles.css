@@ -34,6 +34,11 @@ code{font-family:'SF Mono','Fira Code',monospace;font-size:.85em;background:rgba
 .section{padding:7rem 0}
 
 
+/* CURSOR */
+.cursor{position:fixed;width:10px;height:10px;background:var(--violet);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .1s,width .2s,height .2s;mix-blend-mode:multiply}
+.cursor-trail{position:fixed;width:32px;height:32px;border:1.5px solid rgba(99,102,241,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:left .12s,top .12s,width .2s,height .2s}
+body:has(a:hover) .cursor,.cursor.hover{width:18px;height:18px}
+@media(hover:none){.cursor,.cursor-trail{display:none}body{cursor:auto}}
 
 /* SECTION LABELS */
 .sec-label{display:inline-flex;align-items:center;gap:.4rem;font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--violet);background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);padding:.3rem .9rem;border-radius:999px;margin-bottom:1rem}
